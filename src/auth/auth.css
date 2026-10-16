@@ -1,0 +1,372 @@
+:root {
+  /* Colors/font come from tokens.css (exact Figma values); the surface mapping below is matched by eye */
+  --bg-overlay: rgba(0, 0, 0, 0.55);
+  --surface: var(--neutral-8);
+  --surface-2: var(--neutral-7);
+  --input-bg: var(--neutral-10);
+  --text: var(--neutral-1);
+  --muted: var(--neutral-5);
+  --btn-ghost: var(--neutral-7);
+  --radius-modal: 48px;
+  --radius-field: 16px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: var(--bg-overlay);
+  backdrop-filter: blur(2px);
+  font-family: var(--font);
+  color: var(--text);
+}
+
+.modal {
+  position: relative;
+  background: var(--surface);
+  border-radius: var(--radius-modal);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.5);
+}
+
+.modal--login {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: min(968px, 94vw);
+  height: min(680px, 92vh);
+  overflow: hidden;
+}
+
+.modal--signup {
+  width: min(412px, 94vw);
+  padding: 36px 48px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  background: none;
+  border: 0;
+  color: var(--text);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* QR panel */
+.qr {
+  background: var(--surface-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px;
+}
+
+.qr__box {
+  width: 204px;
+  height: 204px;
+  border-radius: 12px;
+  background: #b9bcc2;
+  display: grid;
+  place-items: center;
+  margin-bottom: 24px;
+}
+
+.qr__download {
+  background: #2b2d33;
+  color: var(--text);
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qr h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.qr p {
+  margin: 0;
+  max-width: 180px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Form side */
+.login {
+  padding: 72px 48px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  margin: 0 0 12px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.title em {
+  font-style: normal;
+  color: var(--yellow);
+}
+
+.field {
+  position: relative;
+  display: block;
+  background: var(--input-bg);
+  border: 2px solid transparent;
+  border-radius: var(--radius-field);
+  padding: 14px 20px 12px;
+}
+
+.field:focus-within {
+  border-color: var(--yellow);
+}
+
+.field__label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.field__input {
+  width: 100%;
+  background: none;
+  border: 0;
+  outline: 0;
+  color: var(--text);
+  font: inherit;
+  font-size: 17px;
+  caret-color: var(--yellow);
+}
+
+.field__eye {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  background: none;
+  border: 0;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.check--terms {
+  align-items: flex-start;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.check input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--yellow);
+  margin-top: 2px;
+}
+
+.link {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.btn {
+  height: 52px;
+  border: 0;
+  border-radius: var(--radius-field);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--yellow);
+  color: #17171a;
+}
+
+.btn--primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn--ghost {
+  background: var(--btn-ghost);
+  color: var(--text);
+}
+
+.back {
+  background: none;
+  border: 0;
+  color: var(--text);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #44474f;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social__btn {
+  background: none;
+  border: 0;
+  color: var(--text);
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.social__btn span {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--btn-ghost);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Signup tabs */
+.auth-tabs {
+  align-self: center;
+  display: flex;
+  background: var(--input-bg);
+  border-radius: 999px;
+  padding: 4px;
+  margin-bottom: 8px;
+}
+
+.tabs__tab {
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tabs__tab.is-active {
+  background: var(--surface-2);
+  color: var(--yellow);
+}
+
+@media (max-width: 760px) {
+  .modal--login {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .qr {
+    display: none;
+  }
+
+  .login {
+    padding: 56px 24px 24px;
+  }
+}
+
+/* QR panel: live (03), hover (02), expired */
+.qr__box {
+  position: relative;
+  background: #fff;
+  padding: 12px;
+}
+
+.qr__code {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: #000;
+}
+
+.qr__download {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .15s;
+  white-space: nowrap;
+}
+
+.qr__box:hover {
+  background: #b9bcc2;
+}
+
+.qr__box:hover .qr__code {
+  opacity: 0.25;
+}
+
+.qr__box:hover .qr__download,
+.qr__box.is-expired .qr__download {
+  opacity: 1;
+}
+
+.qr__box.is-expired {
+  background: #b9bcc2;
+}
+
+.qr__box.is-expired .qr__code {
+  opacity: 0.25;
+}
+
+.qr h3 em {
+  font-style: normal;
+  color: var(--yellow);
+}

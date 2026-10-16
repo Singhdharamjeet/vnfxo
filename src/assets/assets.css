@@ -1,0 +1,397 @@
+.assets {
+    background: var(--neutral-10);
+}
+
+.assets .subtabs a {
+    color: var(--neutral-6);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.assets .subtabs a.is-on {
+    color: var(--yellow);
+}
+
+.assets .subtabs {
+    gap: 32px;
+    padding: 20px 28px 16px;
+}
+
+.panel {
+    flex: 1;
+    padding: 20px 28px 40px;
+    background: var(--neutral-9);
+    border-radius: 16px 16px 0 0;
+}
+
+.card {
+    padding: 16px;
+    background: var(--neutral-8);
+    border-radius: 12px;
+    color: var(--neutral-1);
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--neutral-5);
+    letter-spacing: .02em;
+}
+
+.card small {
+    display: block;
+    color: var(--neutral-5);
+    font-size: 12px;
+}
+
+.sum {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2.2fr;
+    gap: 16px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sum .card>b {
+    display: block;
+    margin: 8px 0 18px;
+    font-size: 22px;
+}
+
+.sum p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--neutral-5);
+}
+
+.hist {
+    position: relative;
+}
+
+.hist .link {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.assets .link {
+    color: var(--yellow);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.assets .link.center {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.hist__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 14px;
+    border-top: 1px solid var(--neutral-9);
+}
+
+.hist__row div {
+    padding: 10px 8px 0;
+}
+
+.hist__row b {
+    display: block;
+    margin-top: 6px;
+    font-size: 18px;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: 1.1fr 1.1fr 1.1fr;
+    gap: 20px;
+}
+
+.row2 {
+    grid-row: span 2;
+}
+
+.pills {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+.pills button {
+    padding: 6px 10px;
+    border: 0;
+    border-radius: 6px;
+    background: none;
+    color: var(--neutral-5);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.pills .is-on {
+    background: var(--neutral-7);
+    color: var(--yellow);
+}
+
+.donut {
+    width: 100%;
+    max-width: 360px;
+    display: block;
+    margin: 8px auto 20px;
+}
+
+.legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+}
+
+.legend i,
+.key i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.legend__swatch--hpg {
+    background: #ff8a4c;
+}
+
+.legend__swatch--vcg {
+    background: #ffd43b;
+}
+
+.legend__swatch--vnd {
+    background: #f2564d;
+}
+
+.legend__swatch--vcb {
+    background: #3ddc55;
+}
+
+.legend__swatch--tpb {
+    background: #4aa8ff;
+}
+
+.legend__swatch--acb {
+    background: #4a7bff;
+}
+
+.legend__swatch--ssi {
+    background: #d946ef;
+}
+
+.legend__swatch--mwg {
+    background: #8b5cf6;
+}
+
+.ov {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    background: var(--neutral-9);
+    border-radius: 8px;
+}
+
+.ov th {
+    padding: 12px;
+    background: var(--neutral-7);
+    text-align: right;
+    font-weight: 600;
+}
+
+.ov th:first-child,
+.ov td:first-child {
+    text-align: left;
+}
+
+.ov td {
+    padding: 10px 12px;
+    text-align: right;
+}
+
+.selrow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.sel,
+.assets .field-s {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 36px;
+    padding: 0 12px;
+    background: var(--neutral-9);
+    border: 1px solid var(--neutral-7);
+    border-radius: 8px;
+    color: var(--neutral-5);
+    font-size: 13px;
+}
+
+.sel select {
+    background: none;
+    border: 0;
+    color: var(--neutral-1);
+    font-weight: 600;
+}
+
+.chart2 {
+    display: flex;
+    gap: 8px;
+    height: 220px;
+}
+
+.chart2--tall {
+    height: 340px;
+}
+
+.chart2__y {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 11px;
+    min-width: 40px;
+    text-align: right;
+}
+
+.chart2__plot {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.chart2__plot svg {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+}
+
+.chart2__x {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6px;
+    font-size: 11px;
+    color: var(--neutral-5);
+}
+
+.key {
+    display: flex;
+    gap: 24px;
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+}
+
+.key i {
+    width: 16px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.key__swatch--your-asset {
+    background: #f8c41a;
+}
+
+.key__swatch--pnl,
+.key__swatch--sp500 {
+    background: #19c19d;
+}
+
+.key__swatch--nasdaq {
+    background: #f2564d;
+}
+
+.det {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 12px;
+}
+
+.boxes {
+    border: 1px solid var(--neutral-7);
+    border-radius: 8px;
+}
+
+.boxes div {
+    padding: 12px;
+    border-bottom: 1px solid var(--neutral-7);
+}
+
+.boxes div:last-child {
+    border: 0;
+}
+
+.boxes b {
+    display: block;
+    margin-top: 4px;
+    font-size: 18px;
+}
+
+.rows {
+    margin: 0;
+    padding: 8px 12px;
+    border: 1px solid var(--neutral-7);
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.rows div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.rows dd {
+    margin: 0;
+}
+
+.filters2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.filters2 .right {
+    margin-left: auto;
+}
+
+.pnl {
+    margin-top: 24px;
+    border-radius: 8px;
+}
+
+.pnl .otable td {
+    height: 44px;
+}
+
+.pnl .otable td:nth-child(n+3),
+.pnl .otable th:nth-child(n+3) {
+    text-align: right;
+}
+
+@media (max-width: 1200px) {
+
+    .sum,
+    .grid3 {
+        grid-template-columns: 1fr;
+    }
+
+    .row2 {
+        grid-row: auto;
+    }
+}

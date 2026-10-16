@@ -1,0 +1,165 @@
+.nav {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 12px;
+  background: var(--neutral-9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  color: var(--neutral-1);
+}
+
+.nav__logo {
+  width: 121px;
+  color: var(--neutral-1);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--neutral-1);
+  background: none;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.nav__item:hover {
+  background: var(--neutral-8);
+}
+
+.nav__item.is-active {
+  color: var(--yellow);
+}
+
+.nav__right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav__icon {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: 0;
+  color: var(--neutral-5);
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.nav__icon:hover {
+  background: var(--neutral-8);
+}
+
+.nav__lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px;
+  background: none;
+  border: 0;
+  color: var(--neutral-5);
+  cursor: pointer;
+}
+
+.nav__cta {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--yellow);
+  color: var(--neutral-10);
+  cursor: pointer;
+}
+
+.nav__login {
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  color: var(--neutral-1);
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .nav__links {
+    display: none;
+  }
+}
+
+/* language dropdown (Market/change language) */
+.nav__langwrap {
+  position: relative;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.langmenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 50;
+  width: 200px;
+  margin: 0;
+  padding: 4px;
+  list-style: none;
+  background: var(--neutral-8);
+  border-radius: 8px;
+  box-shadow: var(--shadow-4);
+}
+
+.langmenu__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 0;
+  border-radius: 6px;
+  background: none;
+  color: var(--neutral-1);
+  cursor: pointer;
+  text-align: left;
+}
+
+.langmenu__item:hover,
+.langmenu__item.is-on {
+  background: var(--neutral-7);
+}
+
+/* nav hover menus (Order book/0) */
+.nav__dd {
+  position: relative;
+}
+
+.nav__sub {
+  display: none;
+  top: 100%;
+  left: 0;
+  right: auto;
+  width: 240px;
+}
+
+.nav__dd:hover .nav__sub {
+  display: block;
+}

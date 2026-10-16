@@ -1,0 +1,176 @@
+.cash .panel {
+    background: var(--neutral-9);
+}
+
+.cash .wrap {
+    max-width: 1130px;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+}
+
+.cash h1 {
+    margin: 0 0 20px;
+    font-size: 44px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.cash .two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.cash .card {
+    padding: 24px;
+    border-radius: 24px;
+}
+
+.cash .step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 20px;
+    font-size: 18px;
+}
+
+.cash .step+.amount+.step {
+    margin-top: 40px;
+}
+
+.cash .num {
+    flex: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--yellow);
+    color: #17171a;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.cash .amount {
+    display: flex;
+    gap: 16px;
+}
+
+.cash .amount .box {
+    flex: 1;
+    padding: 14px 16px;
+    border: 1px solid var(--neutral-7);
+}
+
+.cash .amount .box input {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.cash .create {
+    width: 166px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--neutral-7);
+    color: var(--neutral-6);
+    font: 600 16px/1.2 var(--font);
+    cursor: pointer;
+}
+
+.cash .create:not(:disabled) {
+    background: var(--yellow);
+    color: #17171a;
+}
+
+.cash .create:disabled {
+    cursor: not-allowed;
+}
+
+.cash .qrbox {
+    width: 300px;
+    height: 300px;
+    margin: 28px auto 16px;
+    border-radius: 12px;
+    background: var(--neutral-7);
+}
+
+.cash .qrbox.live {
+    background: #fff;
+    padding: 14px;
+}
+
+.cash .qrhint {
+    margin: 0 0 56px;
+    text-align: center;
+    color: var(--neutral-6);
+    font-size: 18px;
+}
+
+.cash .card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cash .two-sel {
+    justify-content: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.cash .hist-scroll {
+    max-height: 560px;
+    border: 1px solid var(--neutral-7);
+    border-radius: 8px;
+    overflow: auto;
+}
+
+.cash .otable th {
+    position: sticky;
+    top: 0;
+    padding: 18px 16px;
+    background: var(--neutral-7);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.cash .otable td {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 16px;
+    color: var(--neutral-5);
+}
+
+.cash .otable td:nth-child(n+2),
+.cash .otable th:nth-child(n+2) {
+    text-align: right;
+}
+
+.cash .otable td.c-up,
+.cash .otable td.c-down,
+.cash .otable td.c-ref {
+    color: inherit;
+}
+
+.cash .otable td.c-up {
+    color: var(--green);
+}
+
+.cash .otable td.c-down {
+    color: var(--red);
+}
+
+.cash .otable td.c-ref {
+    color: var(--yellow);
+}
+
+@media (max-width: 1000px) {
+    .cash .two {
+        grid-template-columns: 1fr;
+    }
+}
+
+.withdraw-placeholder {
+    padding: 28px;
+}

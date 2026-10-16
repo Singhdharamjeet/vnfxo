@@ -1,0 +1,527 @@
+.c-up {
+    color: var(--green);
+}
+
+.c-down {
+    color: var(--red);
+}
+
+.c-ref {
+    color: var(--yellow);
+}
+
+.shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--neutral-10);
+    color: var(--neutral-1);
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+.field-s {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 32px;
+    padding: 0 12px;
+    background: var(--neutral-10);
+    border: 1px solid var(--neutral-8);
+    border-radius: 8px;
+    color: var(--neutral-5);
+    font-size: 12px;
+}
+
+.field-s input,
+.field-s select {
+    background: none;
+    border: 0;
+    color: var(--neutral-1);
+    font-weight: 600;
+    outline: 0;
+}
+
+.field-s:focus-within {
+    border-color: var(--yellow);
+}
+
+.btn-soft {
+    padding: 8px 14px;
+    background: var(--neutral-8);
+    border: 0;
+    border-radius: 6px;
+    color: var(--neutral-1);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-soft:disabled {
+    opacity: .5;
+    cursor: default;
+}
+
+.subtabs {
+    display: flex;
+    gap: 20px;
+    padding: 12px 16px;
+}
+
+.subtabs button {
+    background: none;
+    border: 0;
+    color: var(--neutral-6);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.subtabs .is-on {
+    color: var(--yellow);
+}
+
+.otable-wrap {
+    overflow: auto;
+}
+
+.otable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.otable th {
+    padding: 10px 8px;
+    background: var(--neutral-8);
+    color: var(--neutral-1);
+    font-weight: 500;
+    text-align: left;
+}
+
+.otable td {
+    height: 32px;
+    padding: 0 8px;
+}
+
+.otable tbody tr:nth-child(odd) {
+    background: var(--neutral-9);
+}
+
+.otable td:nth-child(n+4):nth-child(-n+9),
+.otable th:nth-child(n+4):nth-child(-n+9),
+.otable td:nth-child(11),
+.otable th:nth-child(11) {
+    text-align: right;
+}
+
+.act {
+    text-align: right;
+}
+
+.act button {
+    background: none;
+    border: 0;
+    margin-left: 8px;
+    color: var(--neutral-5);
+    cursor: pointer;
+}
+
+.ob .filters {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px 16px;
+}
+
+.ob .filters .btn-soft {
+    margin-left: auto;
+}
+
+.ob .otable-wrap {
+    margin: 0 16px;
+    border-radius: 8px;
+}
+
+.trading {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 240px 1fr 300px;
+    grid-template-rows: 48px 1fr;
+}
+
+.trading>.nav {
+    grid-column: 1 / -1;
+}
+
+.watch {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-right: 1px solid var(--neutral-8);
+    overflow: hidden;
+}
+
+.chips {
+    display: flex;
+    gap: 6px;
+}
+
+.chip {
+    padding: 6px 12px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--neutral-8);
+    color: var(--neutral-1);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.chip.is-on {
+    background: var(--yellow);
+    color: var(--neutral-10);
+    font-weight: 600;
+}
+
+.watch__list {
+    overflow: auto;
+    font-size: 11px;
+}
+
+.watch__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 6px 8px;
+    text-align: right;
+}
+
+.watch__row span:first-child {
+    text-align: left;
+}
+
+.watch__row.head {
+    color: var(--neutral-5);
+}
+
+.watch__row.is-on {
+    background: rgba(248, 196, 26, .25);
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: auto;
+}
+
+.quote {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 12px 16px;
+}
+
+.quote>div:nth-child(2) {
+    margin-left: auto;
+}
+
+.quote h2 {
+    display: inline;
+    margin: 0 8px 0 0;
+    font-size: 20px;
+}
+
+.quote p {
+    margin: 4px 0 0;
+    color: var(--neutral-5);
+    font-size: 12px;
+}
+
+.quote small {
+    display: block;
+    color: var(--neutral-5);
+    font-size: 11px;
+}
+
+.quote b {
+    font-size: 16px;
+}
+
+.tag {
+    padding: 2px 6px;
+    background: var(--neutral-8);
+    border-radius: 4px;
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+.chartbox {
+    position: relative;
+    margin: 0 16px;
+    padding: 8px;
+    background: var(--neutral-9);
+    border: 1px solid var(--neutral-8);
+    flex: 1;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tfbar {
+    display: flex;
+    gap: 6px;
+    padding-bottom: 8px;
+}
+
+.tf {
+    padding: 4px 10px;
+    border: 0;
+    border-radius: 6px;
+    background: none;
+    color: var(--neutral-5);
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.tf.is-on {
+    background: var(--neutral-7);
+    color: var(--neutral-1);
+}
+
+.chart {
+    flex: 1;
+    width: 100%;
+    min-height: 200px;
+}
+
+.vol {
+    width: 100%;
+    height: 70px;
+}
+
+.orders {
+    padding: 0 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.orders .subtabs {
+    padding: 12px 0 0;
+}
+
+.orders .btn-soft {
+    align-self: flex-start;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px;
+    border-left: 1px solid var(--neutral-8);
+    overflow: auto;
+}
+
+.seg {
+    display: flex;
+    gap: 4px;
+    background: var(--neutral-8);
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.seg button {
+    flex: 1;
+    padding: 6px;
+    border: 0;
+    border-radius: 6px;
+    background: none;
+    color: var(--neutral-1);
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.seg .is-on {
+    background: var(--neutral-10);
+    color: var(--yellow);
+}
+
+.stats {
+    margin: 0;
+    font-size: 11px;
+}
+
+.stats div {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.stats dt {
+    color: var(--neutral-5);
+}
+
+.stats dd {
+    margin: 0;
+}
+
+.depth {
+    width: 100%;
+    height: 130px;
+    background: var(--neutral-9);
+}
+
+.ticket {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: auto;
+    border-top: 1px solid var(--neutral-8);
+    padding-top: 12px;
+}
+
+.seg--trade .is-buy {
+    background: var(--neutral-10);
+    color: var(--green);
+    outline: 1px solid var(--green);
+}
+
+.seg--trade .is-sell {
+    background: var(--neutral-10);
+    color: var(--red);
+    outline: 1px solid var(--red);
+}
+
+.bp {
+    margin: 0;
+    font-size: 11px;
+    color: var(--neutral-5);
+}
+
+.box {
+    display: block;
+    padding: 8px 12px;
+    background: var(--neutral-10);
+    border-radius: 8px;
+    color: var(--neutral-5);
+    font-size: 11px;
+}
+
+.box input {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    background: none;
+    border: 0;
+    outline: 0;
+    color: var(--neutral-1);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.types {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.types button {
+    padding: 4px;
+    background: var(--neutral-8);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: var(--neutral-1);
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.types .is-on {
+    border-color: var(--yellow);
+    color: var(--yellow);
+}
+
+.adv {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+}
+
+.adv select {
+    margin-left: auto;
+    background: var(--neutral-8);
+    border: 0;
+    border-radius: 4px;
+    color: var(--neutral-1);
+    padding: 4px;
+}
+
+.switch {
+    width: 32px;
+    height: 18px;
+    border: 0;
+    border-radius: 999px;
+    background: var(--neutral-7);
+    position: relative;
+    cursor: pointer;
+}
+
+.switch::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--neutral-1);
+    transition: transform .15s;
+}
+
+.switch.is-on {
+    background: var(--yellow);
+}
+
+.switch.is-on::after {
+    transform: translateX(14px);
+}
+
+.two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0 0;
+    font-size: 12px;
+    color: var(--neutral-5);
+}
+
+.total b {
+    color: var(--neutral-1);
+}
+
+.submit {
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+    color: var(--neutral-10);
+    cursor: pointer;
+}
+
+.submit.buy {
+    background: var(--green);
+}
+
+.submit.sell {
+    background: var(--red);
+}

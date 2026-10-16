@@ -1,0 +1,89 @@
+/* Exact values from the Figma "Style guide" page. Font: Roboto (add it via Google Fonts or @fontsource/roboto). */
+:root {
+  /* Neutrals */
+  --neutral-10: #111315;
+  --neutral-9: #1a1d1f;
+  --neutral-8: #272b30;
+  --neutral-7: #393e46;
+  --neutral-6: #787f88;
+  --neutral-5: #a8b0b8;
+  --neutral-4: #efefef;
+  --neutral-3: #f4f4f4;
+  --neutral-2: #fcfcfc;
+  --neutral-1: #ffffff;
+  /* Accents (04 = main, 03 darker, 05 lighter) */
+  --primary: #1073f5;
+  --red: #f2271c;
+  --green: #24c248;
+  --yellow: #f8c41a;
+  --purple: #a240ee;
+  --teal: #19c19d;
+  /* Elevation 4 */
+  --shadow-4: 0 12px 24px rgba(91, 104, 113, 0.24), 0 0 1px rgba(26, 32, 36, 0.32);
+  --font: "Roboto", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+}
+
+/* Type scale: size / line-height / weight / letter-spacing */
+.h1 {
+  font: 600 64px/normal var(--font);
+  letter-spacing: -1.408px;
+}
+
+.h2 {
+  font: 600 48px/normal var(--font);
+  letter-spacing: -0.912px;
+}
+
+.h3 {
+  font: 600 36px/normal var(--font);
+  letter-spacing: -0.504px;
+}
+
+.h4 {
+  font: 600 20px/normal var(--font);
+  letter-spacing: -0.28px;
+}
+
+.title-1 {
+  font: 600 16px/20px var(--font);
+  letter-spacing: -0.224px;
+}
+
+.body-1 {
+  font: 400 16px/20px var(--font);
+  letter-spacing: -0.224px;
+}
+
+.title-2 {
+  font: 500 14px/16px var(--font);
+  letter-spacing: -0.196px;
+}
+
+.body-2 {
+  font: 400 14px/16px var(--font);
+  letter-spacing: -0.196px;
+}
+
+.title-3 {
+  font: 600 12px/16px var(--font);
+  letter-spacing: -0.168px;
+}
+
+.body-3 {
+  font: 400 12px/16px var(--font);
+  letter-spacing: -0.168px;
+}
+
+.btn-lg {
+  font: 600 14px/16px var(--font);
+  letter-spacing: -0.196px;
+}
+
+.btn-sm {
+  font: 600 12px/16px var(--font);
+  letter-spacing: -0.168px;
+}
